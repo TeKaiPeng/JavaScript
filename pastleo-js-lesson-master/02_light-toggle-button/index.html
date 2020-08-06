@@ -35,10 +35,18 @@
     }
   </style>
   <script> 
-  // 請把整個網頁讀取完之後，再執行 getElementById 這個事情，然後找到底下的id，針對他來處理動作的部分
-    window.addEventListener('DOMContentLoaded', function(){
-      document.getElementById(`toggle`).addEventListener('click', function(){
+
+    window.addEventListener('DOMContentLoaded', function(){// 用 window. 把整個網頁讀取完之後，再執行 getElementById 這個事情，
+      const toggleBtn = document.getElementById(`toggle`);// 然後可以設定const 常數 toggle等於後面那一坨，可以讓code比較簡短
+      toggleBtn.addEventListener('click', function(){// 然後找到底下的id一樣是`toggle`的地方，針對他來處理動作的部分
         document.body.classList.toggle('light')
+
+  // 以這邊的 this 來說，是指 getElementByID 這個按鈕，但是現在比較少用
+      if (toggleBtn.textContent === '開'){
+        this .textContent = '關'
+      }else{
+        this .textContent = '開'
+      }
       })
     })
 
