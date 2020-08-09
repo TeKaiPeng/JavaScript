@@ -12,9 +12,9 @@ $(document).ready(function() {
                 cnt = cnt + 1
                 $('#seconds').text(cnt)
                 $('.dots div:last-child').prependTo($('.dots'))
-            }, 100)
+            }, 1000)
             $('button').text('stop')
             running = true
         }
     })
-})
+})	
