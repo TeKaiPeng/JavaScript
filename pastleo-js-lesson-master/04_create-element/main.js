@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('create-element').addEventListener('click', function() {
-       
+        
         const timeDiv = document.createElement('div') //定義 timeDiv 是用 document.createElement 創建一個區域
         timeDiv.className = 'time'   //然後他的class名稱是'time'
         const currentTime = new Date();     //定義 currentTime 是新增日期，
